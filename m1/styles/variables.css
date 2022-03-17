@@ -1,0 +1,15 @@
+:root {
+   /* Переменные для шрифтов */
+   --fontFamily: "Ubuntu";
+   --fontSize: 16px;
+   --main-weight: 400;
+   /* Переменные для цветов текста */
+   --c-main: #212353;
+   --c-second: #4b5d68;
+   --c-third: #fff;
+   --c-light: #9c69e2;
+   /* Переменные для цветов фона */
+   --bg-main: #fff;
+   /* Часто используемые значения в макете */
+   --main-border-radius: 50px;
+}

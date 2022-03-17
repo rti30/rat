@@ -1,0 +1,46 @@
+.arrow {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    width: 20px;
+    height: 2px;
+    margin: 20px;
+}
+.arrow__line {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 2px;
+    background-color: var(--c-light);
+    border-radius: var(--main-border-radius);
+    transition: width 0.3s ease 0s;
+}
+.arrow__line::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    top: -3px;
+    right: -1px;
+    background-color: var(--c-light);
+    transform: rotate(45deg);
+    border-radius: var(--main-border-radius);
+}
+.arrow__line::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    top: 3px;
+    right: -1px;
+    background-color: var(--c-light);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transform: rotate(-45deg);
+    border-radius: var(--main-border-radius);
+}
+@media (any-hover: hover) {
+    .arrow:hover > .arrow__line,
+    .arrow:focus > .arrow__line {
+        width: 40px;
+    }
+}

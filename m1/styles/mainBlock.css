@@ -1,0 +1,126 @@
+.main-block {
+    background: linear-gradient(180deg, #f6fafd 0%, #ffffff 19.4%);
+    padding: 40px 0 0px 0;
+}
+.main-block__header {
+    margin: 0 0 40px 0;
+    display: flex;
+    gap: 0 40px;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+.header__menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 25px;
+    font-weight: 500;
+    line-height: calc(26 / 16);
+}
+.header__link {
+    cursor: pointer;
+    transition: color 0.3s ease 0s;
+    color: var(--c-second);
+    padding: 5px 0;
+}
+.header__link--active {
+    color: var(--c-main);
+    font-weight: 700;
+}
+.preview__title {
+    margin: 0 0 20px 0;
+}
+.preview__img {
+    max-height: 420px;
+    margin: 0 0 20px 0;
+    overflow: hidden;
+}
+.preview__img img {
+    height: 100%;
+    width: 100%;
+}
+.preview__text {
+    margin: 0 0 20px 0;
+}
+.preview__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 60px;
+    background-color: var(--c-light);
+    color: var(--c-third);
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: var(--main-border-radius);
+    margin: 5px auto;
+    transition: box-shadow 0.3s ease 0s;
+}
+.preview__link {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+@media (any-hover: hover) {
+    .header__link:hover,
+    .header__link:focus {
+        color: var(--c-light);
+    }
+    .preview__button:hover {
+        box-shadow: 0 1px 4px rgba(156, 105, 226, 1), -23px 0 20px -23px rgba(156, 105, 226, 0.8),
+            23px 0 20px -23px rgba(156, 105, 226, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .main-block {
+        padding: 65px 0 0px 0;
+        position: relative;
+    }
+    .main-block__header {
+        margin: 0 0 145px 0;
+    }
+    .preview__title {
+        max-width: 52%;
+        position: relative;
+        margin: 0px 0 50px 0;
+        z-index: 1;
+    }
+    .preview__img {
+        max-height: none;
+        position: absolute;
+        margin: 0;
+        transform: translate(40%, -30%);
+        width: 55.313%;
+    }
+    .preview__img img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .preview__text {
+        position: relative;
+        z-index: 1;
+        max-width: 28%;
+        margin: 0 0 50px 0;
+    }
+    .preview__button {
+        margin: 0 0 5px 0;
+    }
+    .header__menu {
+        gap: 0 40px;
+    }
+}
+@media screen and (min-width: 1600px) {
+    .preview__img {
+        height: 468px;
+        width: 885px;
+    }
+}

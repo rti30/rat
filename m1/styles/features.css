@@ -1,0 +1,125 @@
+.features__title {
+    text-align: center;
+    margin: 0 0 15px 0;
+}
+.features__description {
+    text-align: center;
+    margin: 0 0 15px 0;
+}
+.features-table__card {
+    position: relative;
+    overflow: hidden;
+}
+.features-table__card:not(:last-child) {
+    margin-bottom: 10px;
+}
+.features-table__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 100px);
+}
+.features-table__bg img {
+    width: 100%;
+    height: 100%;
+}
+.features-table__row {
+    position: relative;
+}
+.features-table__img {
+    text-align: center;
+    margin: 0 0 10px 0;
+    max-width: 290px;
+    max-height: 290px;
+}
+.features-table__img img {
+    width: 100%;
+    height: 100%;
+}
+.features-table__body {
+    text-align: center;
+    max-width: 230px;
+    margin: 0 auto;
+}
+.features-table__title {
+    margin: 0 0 10px 0;
+    font-weight: 500;
+}
+.features-table__text {
+    margin: 0 0 5px 0;
+    max-height: 240px;
+    overflow: auto;
+}
+.features-table__more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 700;
+}
+@media (any-hover: hover) {
+    .features-table__more:hover .arrow__line,
+    .features-table__more:focus .arrow__line {
+        width: 40px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .features__title {
+        margin: 0 0 50px 0;
+    }
+    .features__description {
+        margin: 0 auto 100px auto;
+        max-width: 585px;
+    }
+    .features__table {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px 45px;
+    }
+    .features-table__card {
+        position: relative;
+        flex: 1 0 calc((100% / 2) - 45px);
+    }
+    .features-table__card:not(:last-child) {
+        margin: 0;
+    }
+    .features-table__bg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        text-align: right;
+        transform: none;
+    }
+    .features-table__bg img {
+        width: auto;
+        height: auto;
+    }
+    .features-table__title {
+        margin: 0 0 20px 0;
+    }
+    .features-table__text {
+        margin: 0 0 10px 0;
+    }
+    .features-table__row {
+        position: relative;
+        display: flex;
+        height: 100%;
+        gap: 0 30px;
+    }
+    .features-table__img {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .features-table__body {
+        flex: 0 0 50%;
+        text-align: left;
+        padding: 40px 20px 40px 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .features-table__text {
+        flex: 1 1 auto;
+    }
+}

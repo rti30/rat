@@ -1,0 +1,32 @@
+{
+  "name": "m3",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "tsc": "tsc",
+    "start:build": "tsc ./src/main.ts",
+    "dev": "vite",
+    "build": "tsc && build ./src/main.ts",
+    "preview": "vite preview",
+    "nodemon": "ts-node -r nodemon ./src/main.ts",
+    "start": "ts-node-dev ./src/main.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.7.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.4.1",
+    "mongoose": "^6.2.6"
+  }
+}

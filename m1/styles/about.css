@@ -1,0 +1,52 @@
+.about__body {
+    padding: 20px 18px;
+    background-color: rgba(240, 99, 184, 0.15);
+    border-radius: var(--main-border-radius);
+    display: grid;
+    grid-template-areas:
+        "title"
+        "img"
+        "text";
+}
+.about__img {
+    grid-area: img;
+    margin: 0 0 15px 0;
+    max-height: 350px;
+}
+/* //! методология будет нарушаться в таких селекторах по атрибуту (img), тут div обертка, на дальнейшее перестроение html не повлияет*/
+.about__img img {
+    height: 100%;
+    width: 100%;
+}
+.about__title {
+    grid-area: title;
+    margin: 0 0px 20px 0;
+}
+.about__text {
+    grid-area: text;
+    text-align: left;
+}
+@media screen and (min-width: 768px) {
+    .about__body {
+        padding: 30px 90px 30px 15px;
+        grid-template-areas:
+            "img title"
+            "img text";
+        align-content: center;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 60px;
+    }
+    .about__title {
+        margin: 0 0 40px 0;
+    }
+    .about__img {
+        margin: 0;
+        max-height: 470px;
+    }
+    .about__title {
+        align-self: end;
+    }
+    .about__text {
+        align-self: start;
+    }
+}

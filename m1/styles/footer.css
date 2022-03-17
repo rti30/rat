@@ -1,0 +1,102 @@
+.footer {
+    border-top: 2px solid rgba(55, 0, 71, 0.2);
+    text-align: center;
+    padding: 50px 0;
+}
+.footer__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0 10px 0;
+}
+.footer__title {
+    font-weight: 700;
+    font-size: 20px;
+}
+.footer__info {
+    line-height: calc(29 / 16);
+}
+.contacts-info__address {
+    font-weight: 500;
+    line-height: calc(29 / 16);
+}
+.social-icons__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.social-icons__link {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    border-radius: 50%;
+}
+@media (any-hover: hover) {
+    .social-icons__link {
+        background-color: #e9e9ee;
+    }
+    .social-icons__link:hover,
+    .social-icons__link:focus {
+        transition: background-color 0.3s ease 0s;
+        background-color: #000000;
+    }
+}
+.footer__social {
+    margin-bottom: 20px;
+}
+.footer__subtitle {
+    font-weight: 700;
+    line-height: calc(26 / 16);
+    margin-bottom: 15px;
+}
+.footer__rights {
+    font-size: 12px;
+    line-height: calc(22 / 12);
+}
+@media screen and (min-width: 768px) {
+    .footer {
+        text-align: left;
+    }
+    .footer__body {
+        display: grid;
+        grid-template-areas:
+            "header social"
+            "info social";
+    }
+    .footer__header {
+        grid-area: header;
+        display: flex;
+        justify-content: start;
+        gap: 10px;
+        margin: 20px 0 60px 0;
+    }
+    .footer__info {
+        grid-area: info;
+    }
+    .contacts-info__contacts {
+        margin-bottom: 35px;
+    }
+    .contacts-info__email:hover,
+    .contacts-info__email:focus,
+    .contacts-info__tel:hover,
+    .contacts-info__tel:focus {
+        text-decoration: underline;
+    }
+    .footer__social {
+        grid-area: social;
+        justify-self: end;
+        margin: 20px 0 0 0;
+    }
+    .social-icons__links {
+        justify-content: start;
+    }
+    .footer__rights {
+        max-width: 340px;
+    }
+}
