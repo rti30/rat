@@ -2,7 +2,7 @@
 ## Модуль 2 
 
 ## Вот ссылка на демо:
-- https://rti30.github.io/ratio-module2-demo/
+- https://module2-demo.vercel.app/
 
 ## Особенности:
 - ~~Ужасная структура кода~~

@@ -18,20 +18,20 @@ class RecordController {
    }
    async setRecord(req, res, next) {
       try {
+         setOrigin(req, res);
          const { login, flag } = req.body;
          if (!login || !flag) {
             return next(apiError.BadRequest("Обязательные параметры не переданы"));
          }
          if (flag === 'start') {
             const token = tokenService.generateToken({ login, start: Date.now() });
-            setOrigin(req, res);
-            res.cookie('g2048', token, { httpOnly: true });
+            res.cookie('g2048', token, { maxAge: 30 * 24 * 60 * 60 * 1000, httpOnly: true, sameSite: 'none', secure: true }); //для деплоя
+            // res.cookie('g2048', token, { httpOnly: true });
             return res.json(true);
          }
          else if (flag === 'end') {
             const { g2048: token } = req.cookies;
             if (token) {
-               setOrigin(req, res);
                const end = Date.now();
                const { start, login: cookieLogin } = tokenService.parseToken(token);
                const time = end - start;
