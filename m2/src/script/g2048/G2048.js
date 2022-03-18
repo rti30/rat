@@ -138,7 +138,6 @@ export default class Game2048 {
          this.user.score = this.score;
          this.user = null;
          this.score = 0;
-         recordApi.set({ flag: "start", login: this.user.name });
       }
       this.field = [];
       this.steps = [];
