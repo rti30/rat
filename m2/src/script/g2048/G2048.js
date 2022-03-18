@@ -137,6 +137,7 @@ export default class Game2048 {
          this.user.score = this.score;
          this.user = null;
          this.score = 0;
+         recordApi.set({ flag: "start", login: this.user.name });
       }
       this.field = [];
       this.steps = [];
@@ -151,7 +152,6 @@ export default class Game2048 {
       this.nodeField.addEventListener('pointerdown', this.pointerDown);
       gameMediaQuery(this);
       this.renderScoreList.completed();
-
    }
    saveStep = () => {
       const stepData = {
