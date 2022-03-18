@@ -133,6 +133,7 @@ export default class Game2048 {
       }
    }
    restart = () => {
+      //? более "экономный" вариант рестарта разросся и теперь играет злую шутку
       if (this.user !== null) {
          this.user.score = this.score;
          this.user = null;
